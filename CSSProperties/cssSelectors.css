@@ -1,0 +1,44 @@
+/* universal selector selects everything on the page but isn't super useful/commonly used 
+* {
+    color: pink;
+}
+
+if you want 2+ elements styleld the same way, you can use a comma to style them with the same selector properties
+h1, h2 {
+    color: blue;
+}
+
+separating selectors by a space will affect the styling of the proceeding selector where it's a descendant of the preceeding
+li a {
+    color: green;
+} ^^ colors only anchor tags inside of lists
+section span a{
+    color: pink;
+} ^^ colors only anchor tags within spans that are nested in sections
+
+separating selectors by "+" signified adjacent selectors
+button + section{
+    background-color: blue;
+} ^^ section on the same level before or after a button will be styled
+
+below, using > to separate selectors designates to style direct descendents of the selector type
+footer > a{
+    color: red;
+}
+
+pseudo elements
+::before
+::after
+::first-letter
+::first-line
+
+specificity: ID > Class > element selectors
+how does a browser do specificity checks on css?
+
+border: width | style | color
+padding: all4sidesAtOnce
+padding: vertical | horizontal
+padding: top | horizontal | bottom
+padding: top | right | bottom | left
+
+*/

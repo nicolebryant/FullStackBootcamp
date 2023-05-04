@@ -1,0 +1,36 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    /* Designates display style to use flex-box*/
+    flex-direction: row;
+    /* flex direction adjusts ordering or elements*/
+    justify-content: space-between;
+    /* distributes space along the main axis*/
+    flex-wrap: wrap;
+    /* align-items: center; distributes space along the cross axis; baseline aligns to base of the text on the elements 
+    align content: aligns items along the cross axis
+    align-self: change the alignment along the cross axis for a single element
+    flex-basis: *this is utilized over the usual width attribute* Defines the initial size of an element before additional space is distributed
+    flex-grow: controls the amount of available space an element should take up. accepts a unitless num
+    flex-shrink: shrinks items accordingly if they are larger than the container
+    flex: flex-grow | flex-shrink | flex-basis*/
+
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}

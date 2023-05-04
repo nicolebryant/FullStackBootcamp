@@ -1,0 +1,29 @@
+/* 
+    text-align: controls where the text aligns on the page
+    font-weight: used to control boldness of text
+    text-decoration: controls the appearance of decorative lines on text ex.strikethrough, underline, etc.
+    line-height: sets the height of the line height ex. line-height 2 = double spacing
+    letter-spacing: control spacing between letters in a word
+    font-size: change size of font
+    font-family: used to change the font of words
+    */
+h1 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: teal wavy underline;
+    /* text decoration can also be set to none to remove underlines from text ex.anchor tags */
+    letter-spacing: 7px;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+p {
+    line-height: 2;
+}
+
+/* 
+sizes:
+relative sizes: sizes relatie to screen size/space 
+absolute sizes: absolute they're always equal ex. two things with 10px take up the same space on the same screen
+    **not recommended for responsive websites
+    px
+*/
