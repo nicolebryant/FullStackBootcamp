@@ -1,0 +1,106 @@
+<!-- HTML Forms -->
+<!-- 
+    Forms are a shell or container that will group/contain form controls
+    form: represents a doc section with interactive controls for submittin info
+        action attribute specifies Where data should be sent
+        method specifies which HTTP method should be used
+    Form controls:
+        input: 20+ different inputs date picker -> checkbox with attribute type; use id attribute to assoc. with label for accessibility.
+        label: Adds texts in front of input; use for attribute to associate with input for accessibility
+        button: used to make action
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <form action="list.txt">
+        <p>
+            <label for="username">Enter a Username: </label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a password: </label>
+            <input id="password" type="password" placeholder="password">
+        </p>
+        <p>
+            <label for="color">Enter a Color: </label>
+            <input id="color" type="color">
+        </p>
+        <p>
+            <label for="number">Enter a Number: </label>
+            <input id="number" type="number" placeholder="enter a number" min="0" max="100" step="3">
+        </p>
+        <button>Submit</button>
+        <!-- default button type in a form is a submit button (submits form), need to change -->
+        <button type="button">Submit</button>
+        <!-- This input type also submits form but is a little clunkier -->
+        <input type="submit" value="Click Me">
+    </form>
+    <hr>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q" placeholder="search">
+        <button>Search Reddit</button>
+    </form>
+
+    <hr>
+    <h2>More Inputs</h2>
+    <form action="/list.txt">
+        <!-- checkbox buttons you can select as many as want -->
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to terms</label>
+        <!-- radio buttons only allow you to select one from grouped buttons -->
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="shirtsize" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="shirtsize" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="shirtsize" id="m" value="m">
+        </p>
+        <!-- Selelct -->
+        <label for="meal">Please select an Entree</label>
+        <select name="meal" id="meal">
+            <!-- sometimes first option can be dummy option to give directive -->
+            <option value="fish">Fish</option>
+            <option value="veg">Vegetarian</option>
+            <option value="steak">Steak</option>
+        </select>
+        <!-- range creates a slider and we can contrl the attributes/range input -->
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" id="cheese" name="cheeseAmount" min="1" max="100" step="5">
+        </p>
+        <!-- text area: multi-line text input -->
+        <p>
+            <label for="specialreqs">Any special requests?</label>
+            <textarea name="specialreqs" id="specialreqs" cols="30" rows="2"
+                placeholder="Type Requests Here"></textarea>
+        </p>
+        <button>Submit</button>
+        <h2>Validation Demo</h2>
+        <form action="/dummy">
+            <label for="first">Enter First Name</label>
+            <input type="text" id="first" name="first" required>
+            <p>
+                <label for="username">Enter username</label>
+                <input type="text" id="username" name="username" required minlength="3" maxlength="7">
+            </p>
+            <!-- pattern attribute can be used to add regex to validate inputs; there are some built-ins ex. email or url inputs -->
+            <p>
+                <label for="email">Enter email</label>
+                <input type="email" id="username" name="email" required>
+            </p>
+
+        </form>
+    </form>
+</body>
+
+</html>

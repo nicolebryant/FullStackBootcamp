@@ -1,0 +1,87 @@
+<!-- HTML Tables -->
+<!--
+     Tables are structured sets of data 
+     table: creates a table element
+     td: table data/table data cell; represents a single cell
+     tr: table row; represents a row of cells
+     th: defines a header
+     thead: table head
+     tbody: table body
+     tfoot: table foot
+     colspan: attribute make a cell span multiple columns
+     rowspan: attribute make a cell span multiple rows
+     caption:
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning tables</title>
+</head>
+
+<body>
+    <h1>Heaviest Birds</h1>
+    <table>
+        <tr>
+            <th>Animal</th>
+            <th>Average Mass (kg(lb))</th>
+            <th>Maximum Mass (kg(lb))</th>
+            <th>Flighted</th>
+        </tr>
+        <tr>
+            <td>Ostrich</td>
+            <td>104kg(230lbs)</td>
+            <td>156.8 (346)</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Somali Ostrich</td>
+            <td>90 (200)</td>
+            <td>130 (287) </td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <td>Wild Turkey</td>
+            <td>13.5 (29.8)</td>
+            <td>39 (86) </td>
+            <td>Yes</td>
+        </tr>
+    </table>
+    <h2>Birds V2</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Animal</th>
+            <th colspan="2">Average Mass</th>
+            <th rowspan="2">Flighted</th>
+        </tr>
+        <tr>
+            <th>KG</th>
+            <th>LBS</th>
+        </tr>
+        <tr>
+            <td>Ostrich</td>
+            <td>104kg</td>
+            <td>230</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Somali Ostrich</td>
+            <td>90</td>
+            <td>200</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <td>Wild Turkey</td>
+            <td>13.5</td>
+            <td>29.8</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+</body>
+
+</html>
