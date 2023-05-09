@@ -1,0 +1,7 @@
+Arrays store multiple items in a single variable as an ordered list
+Random access items in an array similar to accessing strings: arrayName[indexNum]
+Other ways to access/update arrays:
+    arrayName.Push:
+    arrayName.Pop:
+    arrayName.Shift:
+    arrayName.Unshift:

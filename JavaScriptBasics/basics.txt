@@ -1,0 +1,22 @@
+REPL: Read Evaluate Print Loop
+This is what is happening when you run JS code in the dev tools command line on Chrome or other browsers
+Numbers:
+    js Only has one number type
+    NaN: Not a Number 
+Booleans: true or false or anything that evaluates ex. 1<=n, etc.
+Variables: let, const, var(this is more or less hold over from previous versions of js)
+Strings:
+    Work similar to Arrays, they're indexed 
+    <stringVar>.length
+    <stringVar>.toLowerCase(), <stringVar>.toUpperCase()
+    <stringVar>.charAt(positionNum), <stringVar>.concat(...strings), <stringVar>.indexOf(searchString),
+    <stringVar>.slice(startNum, <endNum>), <stringVar>.split(separatorString)
+    String template literals: `String template literals let you ${insert} references/evaluations into a ${string} using ${eval} notation`
+    
+basic commands:
+    console.log(<whatToLog>);
+    alert("message"); -- causes a popup message to appear on screen
+    prompt("message"); --- causes a popup message with a text answer box
+    parseInt(variable); converts other variable type into an integer type
+    use script element of html to add a js file to an html page -- they can go in the head but they're better off at the end of the body so that the browser loads elements the interact with the js file - first
+    
