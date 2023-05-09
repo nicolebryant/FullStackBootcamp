@@ -19,4 +19,16 @@ basic commands:
     prompt("message"); --- causes a popup message with a text answer box
     parseInt(variable); converts other variable type into an integer type
     use script element of html to add a js file to an html page -- they can go in the head but they're better off at the end of the body so that the browser loads elements the interact with the js file - first
-    
+
+Decision making in code allows us to create different layouts/outcomes/information situationally
+Comparison Operators:
+    > greater than
+    < less than
+    >= greater than or equal to
+    <= less than or equal to
+    == equality: make the 2 comparators the same type and then compares but ex. 0==false; null==undefined;
+    != non-equality
+    === strict equality: checks for equality of value and type
+    !== strict non-equality
+These evaluations return boolean values
+When letters are compared - the unicode values are compared ex. uppercase letters come first in unicode so they'll evaluate as less than lowercase letters

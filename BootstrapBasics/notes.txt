@@ -1,0 +1,15 @@
+You can link to BootStrap docs by either 1. downloading the files to your Pc and including a ref to that downloading
+or 2. include the reference link to the hosted css page
+Containers are very straightforward. Include a reference to the class you want the container/div to use
+Button is similar
+
+Typography:
+Content>Typography on bootstrap docs
+Display classes: Used to make large headers
+
+Utilities: Help us quickly add stylization to a class/element
+ex. color, border
+
+Grid system
+    every row has 12 units to divvy up among items on that row
+    
