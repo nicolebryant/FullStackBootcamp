@@ -1,7 +1,27 @@
 Arrays store multiple items in a single variable as an ordered list
 Random access items in an array similar to accessing strings: arrayName[indexNum]
 Other ways to access/update arrays:
-    arrayName.Push:
-    arrayName.Pop:
-    arrayName.Shift:
-    arrayName.Unshift:
+    arrayName.Push(item): adds a specified element to the end of an array
+    arrayName.Pop(): removes the last element of an array
+    arrayName.Shift(): removes the first element of an array
+    arrayName.Unshift(): adds an element to the beginning of an array
+
+Misc. Array methods:
+    array1.concat(array2): concatenate two arrays - this builds an entirely new array
+    arrayName.included(checkValue): checks to see if a value is in the array; returns true or false
+    arrayName.indexOf(checkValue): returns index of a value if it is found in the array; if a value is not found the function returns -1
+    arrayName.reverse(): reverse is destructive - is changes the array in place destroying the original array
+    arrayName.slice(?start, ?end): returns a copy of a specified slice of an array - optionally specify start and end points. If left blank a full copy of the array is returned. Negative values can be used to get items from the end of an array
+    arrayName.splice(start, deleteCount, ?insert): destructive to the original array. can be used to delete and add things to an array in place.
+    arrayName.sort(): sorting arrays with this method isn't really great - no matter the types in the array, JS will convert everything to strings and compare their UTF codes to sort
+
+Reference Types and Equality testing:
+    We compare the reference points in mem not the contents of arrays when doing comparison/equality testing
+        This means that ['1', '2'] === ['1', '2'] is false because they don't point to the same points in mem
+
+    Const arrays can have their contents changed but not entirely reassigned to a new array - as long as the reference location in memory doesn't change, JS doesn't think the array has changed
+
+Nested Arrays:
+    Arrays can store arrays within it as well
+    Access items in an array using chained brackets: nestedArray[someNumInFirstArray][otherNumInSubAray]
+    
