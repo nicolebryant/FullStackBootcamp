@@ -1,0 +1,32 @@
+Objects
+
+Objects are collections of properties
+Properties are key-value pairs
+Rather than accessing data using an index, we use a custom key
+
+Example of an object:
+const person = {firstName: "Bob", lastName: "Dylan"}
+
+const comment = {
+    username: "goofygrape",
+    downVotes: 2, 
+    upVotes: 34,
+    netScore: 129, 
+    commentText: "That's a lot of chickens!"
+}
+
+These are both valid ways to define objects. Keeping each key-value pair on it's own line is a common organizational technique in code but it's not necessary
+Similar to arrays, objects can store all different types of data in their key-value pairs on just one object.
+
+Accessing Objects:
+Accessing an object is very simple with a few options.
+objectName['keyName'] ex. accessing the firstName value of the person object defined above: person["firstName"]
+    if you use the above without quotes, JS will assume you are referring to a variable/expression
+objectName.keyName ex. accessing the firstName value of the person object: person.firstName
+
+square bracket notation is great for instances of evaluative access of keys, while dot notation is a little cleaner
+
+Keys:
+Valid keys: all keys are converted to a string*
+    *except for symbols which stay as symbols
+    this means you can even use keywords as keys in an object because they'll be converted to strings (ex. null, undefined, true)
