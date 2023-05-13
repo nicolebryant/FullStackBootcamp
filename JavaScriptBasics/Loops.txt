@@ -1,0 +1,42 @@
+Loops:
+For Loops
+For loop syntax:
+for([initialExpression]; [condition]; [incrementExpression]){}
+    
+    ex.A for loop that will print 0-10 to the console.
+     for(let i =0; i<=10; i++){
+        console.log(i);
+    }
+For loops allow you to create more concise code
+*** Ensure that the condition created will be hit and kill your for loop otherwise you can create an infinite loop
+
+Create loops for an array, start at index 0 and continue looping until last index (length -1)
+To acceses nested arrays: nest for loops within each other
+ex. for(let i = 0; i<arr.length; i++){
+    const row = arr[i];
+    for(let j = 0; j<row.length; j++){
+        console.log(row[j]);
+    }
+}
+
+While loops:
+another form of iteration that runs until a set condition is false
+while(condition){}
+Commonly used with games ex. while(!gameOver){
+    //players move
+    //checkWinConditions
+}
+
+Break keyword: most commonly used with while loops - if some condition is  met then break keyword breaks the current loop/functionality
+
+For...Of loops:
+A nice and easy way to iterate over JS iterables
+for(let item of array)
+for(let char of "hello world")
+
+Note: you cannot use for...of loops on object literals - they are not iterables
+    use For...In
+    Object.keys(object) or Object.values(object) -- each returns an array of either the keys or values of an object
+    object.entries(object) - returns an array of key/value pair arrays
+    not super common to iterate over objects though
+

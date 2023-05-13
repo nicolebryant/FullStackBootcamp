@@ -30,3 +30,9 @@ Keys:
 Valid keys: all keys are converted to a string*
     *except for symbols which stay as symbols
     this means you can even use keywords as keys in an object because they'll be converted to strings (ex. null, undefined, true)
+
+Adding/Updating Info:
+    objectName.key = newValue; 
+    objectName[key] = newValue;
+    Either of the above will update the value associated to the specified key in an object
+    These are the same sytaxes used to update an object
