@@ -1,0 +1,9 @@
+Specify a command: new, list, delete, quit
+new: "Add new item: " <add list> - returns "<add list> added to list"
+list: Shows list of to dos
+delete: select index to be deleted
+quit: quits the app
+
+anything besides these will only cause initial prompt to come up
+store to-dos in an array
+use a while not quit loop
