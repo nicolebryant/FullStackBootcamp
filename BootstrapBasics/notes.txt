@@ -1,15 +1,59 @@
-You can link to BootStrap docs by either 1. downloading the files to your Pc and including a ref to that downloading
+You can link to BootStrap docs by either 1. downloading the files to your Pc and including a ref to that download
 or 2. include the reference link to the hosted css page
+
 Containers are very straightforward. Include a reference to the class you want the container/div to use
 Button is similar
 
-Typography:
-Content>Typography on bootstrap docs
-Display classes: Used to make large headers
+Utilize the docs to confirm class names being used
 
-Utilities: Help us quickly add stylization to a class/element
-ex. color, border
+Display classes: Used to make large headers - do not follow the same guidelines as h1/h2/h3/h4 html elements
+Lead classes: makes font of a paragraph slightly larger and slightly more weighted to stand out
+Button Elements:
+    Button (classic filled stylization) - class = btn btn-[primary/secondary/...]
+    Outlined Button class = btn btn-outline-[primary/secondary/warning/....]
+
+    Badges:
+        Add badge element to buttons or other elements or standalone alongside
+        can be used as part of links or to provide counters (ex. number of hits on a websitet)
+        there's different format of them as well ex.badge-pill will make the badge ovular and pill shaped
+    Alerts:
+        Provides feedback to the user - bring attention to some piece of information
+        div class = "alert alert-danger"
+        You can add headings to an alert - "alert-heading"
+        You can make them dismissable:
+            put the close symbol in a span inside a button - that's in the alert div (aria-hidden="true" will keep screen readers from processing the span)
+                instead add an aria-label to the button set to "close"
+        "data-dismiss" attribute set to alert allows you to dismiss an alert
+        fade out functionality can also be added
+        role="alert" forces a screen reader to be notified/read an alert pop-up
+
+Additional utilities
+Sizes:
+    [-sm/-lg] these can be tacked on to most elements to adjust size
+    ex. class = "btn btn-outline-danger btn-sm"
+Disabled state: make buttons active/inactive - attribute "diabled" added outside of class value
+
+Utilities: Help us quickly add stylization to a class/element; Border, shadow, text color, background color, etc.
+
+Typography:
+    Content>Typography on bootstrap docs
+    these pages will give the initial global settings
+Block quotes:
+    allows you to add in a block quote - there is also a convenient way to add a footer/source name under a quote
+
 
 Grid system
-    every row has 12 units to divvy up among items on that row
-    
+    only works inside of a container: ex. div class = "container"
+    every row has 12 units of space to divvy up among items on that row
+    Rows are auto-sized when col-<width> is not set 
+    form elements, images, carts, etc. are able to go into grids
+
+    Adjust the way a grid splits up items in its container for different screen sizes using screen breakpoints
+        ex. col-md-6: this means an item in a row will take up a whole row until the medium screen size "breakpoint". Anything larger than this will size col-6
+    Add multiple col-<size>-<widthNum> to one element to change sizing more specifically
+
+    Grid Alignment:
+        flex box alignment utilities can be used to align grid items
+        for justify content - there are also responsive settings similar to setting grid col sizes as discussed above
+
+Form group: groups together a label and form input
