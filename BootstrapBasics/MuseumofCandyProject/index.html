@@ -58,6 +58,87 @@
       </div>
     </div>
   </section>
+
+  <section class="container-fluid px-0">
+    <div class="row align-items-center content">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="imgs/milk.png" alt="3 glasses of milk with straws that have donuts on them." class="img-fluid">
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img class="d-none d-lg-inline" src="imgs/lolli_icon.png" alt="">
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid praesentium id, quia
+              dolore est placeat nulla modi a iusto libero magnam! Minus vel inventore praesentium rem. Nam, maiores
+              tempora?
+              Voluptate corrupti iure error officia assumenda aliquam deserunt, totam pariatur at. Rerum temporibus
+              minus
+              esse quis voluptates. Cupiditate dicta, non assumenda facilis fuga autem placeat hic? Nostrum, iusto
+              corporis.
+              Magni.
+              Veritatis facilis labore animi suscipit laborum voluptatum odit eum, consequatur saepe molestiae ea
+              debitis
+              odio ducimus dolore. Repudiandae est officia ullam vitae harum, quam corporis facilis quas voluptates
+              porro
+              maxime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center content">
+      <div class="col-md-6">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img class="d-none d-lg-inline" src="imgs/lolli_icon.png" alt="">
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid praesentium id, quia
+              dolore est placeat nulla modi a iusto libero magnam! Minus vel inventore praesentium rem. Nam, maiores
+              tempora?
+              Voluptate corrupti iure error officia assumenda aliquam deserunt, totam pariatur at. Rerum temporibus
+              minus
+              esse quis voluptates. Cupiditate dicta, non assumenda facilis fuga autem placeat hic? Nostrum, iusto
+              corporis.
+              Magni.
+              Veritatis facilis labore animi suscipit laborum voluptatum odit eum, consequatur saepe molestiae ea
+              debitis
+              odio ducimus dolore. Repudiandae est officia ullam vitae harum, quam corporis facilis quas voluptates
+              porro
+              maxime.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="imgs/gumball.png" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="row align-items-center content">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="imgs/sprinkles.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img class="d-none d-lg-inline" src="imgs/lolli_icon.png" alt="">
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid praesentium id, quia
+              dolore est placeat nulla modi a iusto libero magnam! Minus vel inventore praesentium rem. Nam, maiores
+              tempora?
+              Voluptate corrupti iure error officia assumenda aliquam deserunt, totam pariatur at. Rerum temporibus
+              minus
+              esse quis voluptates. Cupiditate dicta, non assumenda facilis fuga autem placeat hic? Nostrum, iusto
+              corporis.
+              Magni.
+              Veritatis facilis labore animi suscipit laborum voluptatum odit eum, consequatur saepe molestiae ea
+              debitis
+              odio ducimus dolore. Repudiandae est officia ullam vitae harum, quam corporis facilis quas voluptates
+              porro
+              maxime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -70,6 +151,13 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 
+  <script> $(function () {
+      $(document).scroll(function () {
+        var $nav = $("#mainNavbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop > $nav.height());
+      })
+    })
+  </script>
 </body>
 
 </html>
