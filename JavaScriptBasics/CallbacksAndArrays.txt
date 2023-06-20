@@ -1,0 +1,44 @@
+callback functions are functions passed in as a param to another function
+    commonly these are anonymous functions in JS
+
+ForEach is not used often, ForOf loop has replaced this
+
+Map function: takes an array and creates a new array from it. You can use a callback function to transform the values before they are added to the new array.
+
+newer syntax, Arrow functions, exist to allow us to be more concise when making functions
+ex. const square = (num) => {
+    return num**2;
+}
+execute like any other function -- square(3);
+
+Implicit return: to make an implicit return the following syntax can be used
+const rollDie = () => (
+    Math.floor(Math.random() *6) + 1
+)
+
+useful for shortening code but they only work for functions with only one line
+
+setTimeout function pauses for a  set delay before running the passed function.
+setTimeout(() => {
+    console.log("hello!");
+}, 3000);
+
+
+setInterval(function, interval): will repeatedly call a function at a set interval
+
+someArray.filter(function): creates a new array with all elements that pass the test implemented by the provided function
+    callback must be a boolean function to work appropriately
+
+
+someArray.reduce(reducerFunction, ?initialValueforReducerFunction): runs a function on each element in an array - first value in callback function is the accumulator - accumulator is set to the return value of the previous run of the function for each new element
+const prices = [10.10, 9.99, 15.99, 7.98]
+you can use reduce to total the values in an array
+const total = someArray.reduce((total, price) => total + price);
+
+You can also use reduce to find min or max values of an array
+prices.reduce((min, price)) => {
+    if(price < min){
+        return price;
+    }
+    return min;
+}

@@ -1,0 +1,21 @@
+Functions are the basic structure that is used to call repeatable code. Ex. a function could be made that when called simply prints "Hello" to the console
+Reusable procedures ex. generating a random number like a dice roll
+Allows us to write reuasable, modular code
+function funcName(...params){
+    //do something
+}
+Parameters allow you to pass information into a function ex. userInput or calculate value etc.
+Arguments are the implemented version of a param
+
+functions can take any number of params 
+passed args are processed in their order
+
+Scope: "variable visibility" - the location where a varirable is defined dictates where that variable is accessible
+ex. function scope: variables defined within a function are Only accesible within the scope of that function 
+    block scope: variables declared inside a block (ex.conditional or loops) are Only accessible within the scope of that block
+    global scope: variables defined outside of functions are globally accesible
+    lexical scope: an inner function, nested inside an outer/parent function, will have access to the variables defined in outer function scopes
+variable names can be reused as new variables withint smaller scopes: ex. a variable defined globally can be redefined within a function without breaking code - what value is returned from that variable name will change depending on scope the return/console.log is called from
+
+Note: using the var keyword allows variables to be accessed outside of block/function scopes 
+

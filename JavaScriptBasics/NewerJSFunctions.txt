@@ -1,0 +1,72 @@
+Default Parameters:
+
+function rollDie(numSides = 6){
+    return Math.floor(Math.random()*numSides) + 1;
+}
+being able to set a default within a function definition decreases lines of code and clarifies functionality
+Note: defaulting params should come at the end of a function definitions list of params JS operates off of order to assign args to params
+
+Spread:
+Spread syntax allows an iterable such as an array to be expanded in places where zero of more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-values pairs (for object literals) are expeceted
+
+const nums = [1, 2, 3, 4, 5 ,6, 7];
+console.log(...nums); // "1 2 3 4 5 6 7"
+console.log(...'hello'); // "h e l l o"
+
+cats = ['blue', 'scout', 'rocket'];
+dogs = ['rusty', 'wyatt'];
+pets = [...dogs, ...cats, 'speedy']; // ['rusty', 'wyatt', 'blue', 'scout', 'rocket', 'speedy']
+
+you can also spread arrays/iterables into objects but not really common
+you can spread objects into other objects
+
+Rest operator:
+note: The arguments object is an iterable sorta like an array but without all the array methods
+This operator takes the rest of the arguments passed into a  functions - "take the rest of the values and store them in this variable"
+function sum(...nums){
+    return nums.reduce((total, num => total + num));
+}
+
+Destructuring
+A short clean sytax to unpack - values from arrays, properties from objects - into distinct variables
+
+const scores = [203, 200, 190, 130, 95];
+
+// not using destructuring
+const highScore = scores[0];
+const secondHighest = scores[1];
+
+//using destructuring
+const [gold, silver, bronze] = scores; 
+console.log('gold'); // 203
+console.log('silver); // 200
+console.log('bronze'); // 190
+
+//using destrcuturing and rest operator
+const [gold, silver, bronze, ...otherScores] = scores
+console.log(otherScores); // [ 130, 95]
+
+destrcuturing arrays is much more common
+const user = {
+    email: 'harvey@gmail.com',
+    password: 'Fagnru31@',
+    firstName: 'Harvey',
+    lastName: 'Melk',
+    born: 1994
+}
+
+const {email, firstName, lastName, password} = user
+// pull these values out into their own variable. The order matters less because you are calling each value by name
+// You can also reassign new variable names and default values in this process too
+const {born: birthYear, died: deathYear = 'N/A'} = user
+
+Param Destructuring
+destructuring an object in the params shortens and simplifies function processes
+function fullName({firstName, lastName = "Doe"}){
+    return `${firstName} ${lastName}`;
+}
+
+movies.map({title, score, year} => {
+    return ${title} (${year}) is rated ${rating})
+})
+
