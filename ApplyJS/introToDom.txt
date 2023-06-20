@@ -1,0 +1,31 @@
+The DOM: Document Object Model
+    - A JS representation of a webpage
+    - it's JS "window" into the contents of a webpage from JS
+    - object that are able to be interacted with via JS
+
+JS with HTML/CSS on webpages allows more interactive changes to the webpage for users
+
+the DOM consists of a bunch of objects - when a webpage is loaded using JS, the elements are processed into JS objects and added to a tree structure to organize their relationship on a page
+    the top of these trees is the document
+the document object is our entry point into the world of the DOM. It contains representations of all the contents on a page
+plus tons of useful methods and properties
+
+
+console.dir
+
+Selecting methods
+    There are several methods to select specific elements on the document that allow us to manipulate it
+    these functions all exist on the document (DOM) object
+    document.getElementById(elementId):  Takes a string param that corresponds to an id on an element and returns the element object with that id. If no element has the specified id, null is returned
+        ex.document.getElementById("toc"); //returns "table of contents" element object with 'toc' as an id
+    
+    document.getElementsByTagName(tagName): Takes a string param corresponding to a tag name (ex. p, img, div) and returns an HTML Collection of any html objects with matching tag names
+        A collection is Not an Array so available functions are different
+
+    document.getElementsByClassName(className): Takes a string param corresponding to a class name and returns an HTML Collection of any html objects with matching class name
+
+Query Selector
+    Newer, all-in-one method to select a single element
+    document.querySelector(cssStyleSelector): takes a selector ('tagName', '.className', '#idName', '#img:nth-of-type(2)', etc.) and returns the first matching element
+
+    document.querySelectorAll(cssStyleSelector): Takes a selector and returns a list of html objects
