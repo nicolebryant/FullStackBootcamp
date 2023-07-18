@@ -19,13 +19,16 @@ Selecting methods
     document.getElementById(elementId):  Takes a string param that corresponds to an id on an element and returns the element object with that id. If no element has the specified id, null is returned
         ex.document.getElementById("toc"); //returns "table of contents" element object with 'toc' as an id
     
-    document.getElementsByTagName(tagName): Takes a string param corresponding to a tag name (ex. p, img, div) and returns an HTML Collection of any html objects with matching tag names
+    document.getElementsByTagName(tagName): Takes a string param corresponding to a tag name (ex. p, img, div) and returns an HTMLCollection of any html objects with matching tag names
         A collection is Not an Array so available functions are different
+            square brackets, indices will work (all elements have indices in the HTMLCollection)
+            HTMLCollections are iterable so for...of etc will work
+            note: this is a collection of HTML objects not strings or dom objects
 
-    document.getElementsByClassName(className): Takes a string param corresponding to a class name and returns an HTML Collection of any html objects with matching class name
+    document.getElementsByClassName(className): Takes a string param corresponding to a class name and returns an HTML Collection of any html objects with matching class name; if there are none an empty HTML Collection is returned
 
 Query Selector
-    Newer, all-in-one method to select a single element
-    document.querySelector(cssStyleSelector): takes a selector ('tagName', '.className', '#idName', '#img:nth-of-type(2)', etc.) and returns the first matching element
+    Newer, all-in-one methods to select a single element or multiple elements
+    document.querySelector(cssStyleSelector): Takes a selector ('tagName', '.className', '#idName', '#img:nth-of-type(2)', etc.) and returns the first matching element
 
     document.querySelectorAll(cssStyleSelector): Takes a selector and returns a list of html objects
