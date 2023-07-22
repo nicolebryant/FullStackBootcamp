@@ -42,23 +42,28 @@ element.nextElementSibling: this returns next true HTML element
 element.previousSibling : This gives previous domNode
 element.previousElementSibling : This gives previous true HTML element
 
-New elements can be created and appeneded to the DOM:
+New elements can be created and appeneded to the DOM with document.createElement('elementType');
+Ex:
 
-const newElem = document.createElement('elementType');
+const newElem = document.createElement('h3'); 
 newElem.innerText = "New Element!";
+const parentElement = document.querySelector('querySelection');
 document.parentElement.appendChild(newElem); //older version
-new, more flexible way to append elements (note:not compatibile with internet explorer):
+
+There is a newer, more flexible way to append elements (note:not compatibile with internet explorer):
 parentElement.append(element); 
 
-Append can take one or many elements or even used to append text into an element. This function places the new elements as the last child of the parent element
+Append can take one or many elements or even used to append text into an element. This function places the new elements as the last child of the parent element. You can append multiple children at once.
 Prepend works similarly but adds the new element as the first child on the parentElement
 element.insertAdjacentElement('position', newElem)
 insertAdjacentElement allows insertion of elements adjacent to others within a parent element rather than only at the beginning or end.
 positions: beforebegin, afterbegin, beforeend, afterend
 
+element.after(element); // inserts a new element after the parentElement
+
+It is most common to use append/prepend or appendChild functions but there are situations where the others apply better.
 
 Removing elements:
 
 Original method is child.parentElement.removeChild(child) - this requires finding the parent element of the element you wish to remove first
 elem.remove() -- no internet explorer support
-
