@@ -1,0 +1,64 @@
+Properties and Methods for accessing and manipulating HTML objects with JS
+
+innerText, textContent, innerHTML
+    These all allow us to access and manipulate the text displayed within an html element
+    htmlDomElement.innerText: returns only text and only what content is visible on the DOM. Update text displayed (no HTML manipulation)
+    htmlDomElement.textContent: returns all the text regardless of current visibility. Update text display (no HTML manipulation)
+    htmlDomElement.innerHTML: gives the entirety of the markup contained within an element. Allows you to update contents with HTML manipulation
+    ex. document.querySelector('h1').innerText = "HI I AM AN H1"; // This will change the displayed text of the h1 element
+
+Working with Attributes:
+    Elements have many attributes (href, id, class, type, etc.) that can be accessed and utilized
+    Attributes can be accessed off an element found with query selector 
+    element.getAttribute and element.setAttribute(attribute, updateValue) functions exist: These functions pull information directly from the html as opposed to getting the value from the JS Element Object.
+        generally, these values are the same but occasionally they may be different (ex. href values may be defined differently on JS ELement Objects)
+
+
+Changing Styles:
+On JS objects, CSS attributes are stored in a style object on the HTML element
+Note: the CSS style attribute names are all the same but written in camelCase
+The initial CSS object on an element does not contain any of the stylizations defined in a separate css file - only if styles are defined inline do they start on the JS Object
+window.getComputedStyle(elementObject); // this will return the computed CSS style values actually applied to an html elememt; returns a CSSStyleDeclaration object, queryable like a list
+
+The DOM can be used to change styles with JS but it requires every style to be set individually and will place styles inline
+Instead, the preferred method is to add or remove a class name with styles already defined
+
+To manipulate classes:
+    select an element 
+    You can use getAttribute/setAttribute to update a class but it is difficult to update class without losing old classes or to know what classes are already applied to an element
+    Instead use classList:
+        elementObject.classList : this returns a list of classes currently applied to the element
+        elementObject.classList.add('className')
+        elementObject.classList.remove('className')
+
+        elementObject.classList.contains('className') : returns boolean checking whether the specified class is present
+        elementObject.classList.toggle('className') : allows you to toggle a class on an element. This can be useful for click actions etc.
+
+Parents and Siblings:
+A lot of browsers make white space or return characters into textNodes/domNodes
+element.parentElement : returns the element that contains the specified element
+element.nextSibling : This gives next domNode 
+element.nextElementSibling: this returns next true HTML element
+element.previousSibling : This gives previous domNode
+element.previousElementSibling : This gives previous true HTML element
+
+New elements can be created and appeneded to the DOM:
+
+const newElem = document.createElement('elementType');
+newElem.innerText = "New Element!";
+document.parentElement.appendChild(newElem); //older version
+new, more flexible way to append elements (note:not compatibile with internet explorer):
+parentElement.append(element); 
+
+Append can take one or many elements or even used to append text into an element. This function places the new elements as the last child of the parent element
+Prepend works similarly but adds the new element as the first child on the parentElement
+element.insertAdjacentElement('position', newElem)
+insertAdjacentElement allows insertion of elements adjacent to others within a parent element rather than only at the beginning or end.
+positions: beforebegin, afterbegin, beforeend, afterend
+
+
+Removing elements:
+
+Original method is child.parentElement.removeChild(child) - this requires finding the parent element of the element you wish to remove first
+elem.remove() -- no internet explorer support
+
