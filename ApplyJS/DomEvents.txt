@@ -1,10 +1,30 @@
 Learn how to run JS code when a user interacts with an application - in other words we're learning about Events
 
-Events: Responding to user inputs and actions 
+Events: Responding to user inputs and actions(ex.click, drag, double click, drag-drop, scroll, form submission, etc.)
 
 There are 3 ways to respond to user events:
 Ex.
 Clicks:
-    Option 1: Inline Event handling: directly inline add an eventHandling attribute and add js to run when clicked. onclick="alert('you clicked me!')"
-        not great option. Messy, makes for larger markup and a lot of duplication within the HTML.
+    Option 1: Inline Event handling: directly inline add an eventHandling attribute and add js to run when clicked. 
+        ex. <button onclick="alert('you clicked me!')">Click Me!<button>
+        Not great option. Messy HTML, makes for clunkier files, and a lot of duplication within the HTML file. 
     Option 2: Use JS - querySelect element and then update it's onclick attribute
+        Ex.
+            HTML File:
+                <button id="v2">Click Me!</button>
+            JS File:
+                const btn = document.querySelector('#v2');
+                btn.onclick = function () {
+                    console.log("you clicked me!");
+                    alert("I hope this works...Check the console!");
+                }
+        This allows better functionality and reusability. A certain id value could be used to reference buttons, then looped through to add this functionality
+        Still not great with that looping functionality
+    Option 3: Use JS - addEventListener
+        selectedElement.addEventListener('eventType', function..., options?);
+        This is the preferred method to use. Allows multiple callback functions for the same event handler
+        addEventListener has an options object that can be passed in as well to dictate further functionality
+        ex. once, capture, useCapture, etc.
+
+        removeEventListener can be used to manage events. This is useful in heavy applications and where speed/responsiveness is important
+        
