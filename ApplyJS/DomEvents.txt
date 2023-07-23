@@ -1,0 +1,10 @@
+Learn how to run JS code when a user interacts with an application - in other words we're learning about Events
+
+Events: Responding to user inputs and actions 
+
+There are 3 ways to respond to user events:
+Ex.
+Clicks:
+    Option 1: Inline Event handling: directly inline add an eventHandling attribute and add js to run when clicked. onclick="alert('you clicked me!')"
+        not great option. Messy, makes for larger markup and a lot of duplication within the HTML.
+    Option 2: Use JS - querySelect element and then update it's onclick attribute
