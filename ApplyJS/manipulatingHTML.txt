@@ -48,7 +48,7 @@ Ex:
 const newElem = document.createElement('h3'); 
 newElem.innerText = "New Element!";
 const parentElement = document.querySelector('querySelection');
-document.parentElement.appendChild(newElem); //older version
+parentElement.appendChild(newElem); //older version - could also be written document.elem.appendChild without above selector step
 
 There is a newer, more flexible way to append elements (note:not compatibile with internet explorer):
 parentElement.append(element); 
