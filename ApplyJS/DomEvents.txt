@@ -29,3 +29,45 @@ Clicks:
         removeEventListener can be used to manage events. This is useful in heavy applications and where speed/responsiveness is important
         
 
+Keyboard Events & Event Objects:
+Event objects are used most often with keyboard events
+You can listen for keyboard events in the whole window or on a particular element
+
+keyup and keydown:
+    input.addEventListener('keyup', function(){console.log("changed!")});
+    whenever shift, tab, enter, arrow keys, etc. is keyed - the event will fire.
+change event:
+    input.addEventListener('change', function(){console.log("changed!")});
+    Whenever the input is changed and clicked Away from - the change event will fire
+
+input event 
+    input.addEventListener('input', function(){console.log("changed!")});
+    Anytime the input is changed without needing to click away - the input event is triggered
+
+
+Form Events and PreventDefault:
+Default form events/behavior: when a form is submitted, the data on the form is sent to the specified action attribute and the page loads that action value as well
+To change default behavior of a form:
+    set a submit listener on the form object
+        ex. form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("submitted the form");
+        })
+    single page workflow - take data from the page, process it, but stay on the current page.
+    One form, stop submission, get data out, do some logic, update the view
+
+
+    
+Event bubbling:
+    Objects nested inside of other objects can cause the parent -> grandparent -> etc. event to trigger as well - "bubbling"
+    Sometimes this is useful but often this is not the functionality we want
+    button.addEventListener('click', function(e) {
+        alert('clicked!');
+        e.stopPropogation;
+    })
+    stopPropogation stops the event from continuing to "bubble up" to parent elements
+
+Event Delegation:
+Parent elements can be used to identify what child nodes were clicked on
+Event Delegation is useful when there are elements that may not be on the page at the time of load ex. user created/caused
+ex. An ul element can allow access to an li element within it. The event element from the click action contains a target attribute that contains exactly what element was targeted
